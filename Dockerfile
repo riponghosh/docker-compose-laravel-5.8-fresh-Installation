@@ -20,3 +20,5 @@ WORKDIR /app/app
 RUN php artisan make:auth
 ADD ./run.sh /app/app
 CMD ["./run.sh"]
+#apache2 run foreground if not any command run for make foreground
+#CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
